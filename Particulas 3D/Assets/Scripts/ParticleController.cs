@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 public class ParticleController : MonoBehaviour
 {
@@ -9,16 +9,17 @@ public class ParticleController : MonoBehaviour
     [SerializeField] private float Gtime;
     [SerializeField] private float Ggravedad;
     [SerializeField] public GameObject Particle;
-    [SerializeField] private float spawnInterval = 0.1f; 
+    [SerializeField] private float spawnInterval = 0.01f; 
     private float spawnTimer = 0f;
 
     void Update()
     {
         spawnTimer += Time.deltaTime;
-        if (spawnTimer >= spawnInterval)
+        if (spawnTimer >= spawnInterval)s
         {
-            spawnTimer = 0f;
             CreateParticle();
+            spawnTimer = 0f;
+            
         }
     }
 
