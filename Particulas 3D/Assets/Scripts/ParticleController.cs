@@ -15,7 +15,7 @@ public class ParticleController : MonoBehaviour
     void Update()
     {
         spawnTimer += Time.deltaTime;
-        if (spawnTimer >= spawnInterval)s
+        if (spawnTimer >= spawnInterval)
         {
             CreateParticle();
             spawnTimer = 0f;
@@ -27,7 +27,7 @@ public class ParticleController : MonoBehaviour
     {
         GameObject par = Instantiate(Particle, transform.position, Quaternion.identity);
         Particle parScript = par.GetComponent<Particle>();
-        parScript.velIn = GparSpeed * Random.Range(1, 4);
+        parScript.velIn = GparSpeed * Random.Range(1, 3);
         parScript.angIn = Gangle * Random.Range(20, 60);
         parScript.angInZ = Random.Range(0, 361);
         parScript.tiempoMax = Gtime;
